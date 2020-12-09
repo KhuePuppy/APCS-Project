@@ -146,17 +146,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public boolean checkAndRequestPermissionAndroid6() {
-        int permissionCheck = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION);
-        if(permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            // ask permissions here using below code
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    1);
-            return true;
-        }
-        return false;
-    }
-
 }

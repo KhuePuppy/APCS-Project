@@ -144,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // This is the routine to check for permission to access the GPS location
     public boolean checkAndRequestPermissionAndroid6() {
         int permissionCheck = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION);

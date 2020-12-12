@@ -3,9 +3,12 @@ package com.example.weatherapp2;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v4.app.ActivityCompat;
+//import android.support.v4.content.ContextCompat;
+//import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -144,19 +147,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-    }
-
-    public boolean checkAndRequestPermissionAndroid6() {
-        int permissionCheck = ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION);
-        if(permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            // ask permissions here using below code
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    1);
-            return true;
-        }
-        return false;
     }
 
 }

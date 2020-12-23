@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
             String resultText = "Main :                     " + main +
                     "\nDescription :        " + description +
-                    "\nTemperature :        " + temperature + "*K" +
+                    "\nTemperature :        " + String.format("%.2f",kelvinTooFahrenheit(Float.parseFloat(temperature))) + "*F" +
                     "\nVisibility :              " + visibiltyInKilometer + " KM" +
                     "\nHumidity :        " + humidity +
                     "\nPressure :        " + pressure +
@@ -147,6 +147,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+    }
+    private double kelvinTooFahrenheit(double kelvin){
+        return (kelvin - 273.15) * (9/5) + 32;
+    }
+
+    private double kelvinToCelsius(double kelvin){
+        return kelvin - 273.15;
     }
 
 }

@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             humidity = mainPart.getString("humidity");
             pressure = mainPart.getString("pressure");
             windSpeed =  windPart.getString("speed");
-            windDirection = windPart.getString("deg" + " degrees");
+//            windDirection = windPart.getString("deg" + " degrees");
 
 
             visibility = Double.parseDouble(jsonObject.getString("visibility"));
@@ -124,12 +124,12 @@ public class MainActivity extends AppCompatActivity {
 
             String resultText = "Main :                     " + main +
                     "\nDescription :        " + description +
-                    "\nTemperature :        " + temperature + "*C" +
+                    "\nTemperature :        " + temperature + "*K" +
                     "\nVisibility :              " + visibiltyInKilometer + " KM" +
                     "\nHumidity :        " + humidity +
                     "\nPressure :        " + pressure +
-                    "\nWind Speed :        " + windSpeed +
-                    "\nWind Direction :        " + windDirection;
+                    "\nWind Speed :        " + windSpeed;
+//                    "\nWind Direction :        " + windDirection;
 
 
             result.setText(resultText);

@@ -116,6 +116,10 @@ public class MainActivity extends AppCompatActivity {
             visibility = Double.parseDouble(jsonObject.getString("visibility"));
             //By default visibility is in meter
             int visibiltyInKilometer = (int) visibility/1000;
+            double windSpeedInKilometers = Double.parseDouble(windPart.getString("speed"));
+            //By default visibility is in meter
+
+
 
             Log.i("Temperature",temperature);
 
@@ -123,12 +127,12 @@ public class MainActivity extends AppCompatActivity {
             Log.i("description",description);*/
 
             String resultText = "Main :                     " + main +
-                    "\nDescription :        " + description +
+                    "\nDescription :          " + description +
                     "\nTemperature :        " + String.format("%.2f",kelvinTooFahrenheit(Float.parseFloat(temperature))) + "*F" +
-                    "\nVisibility :              " + visibiltyInKilometer + " KM" +
-                    "\nHumidity :        " + humidity +
-                    "\nPressure :        " + pressure +
-                    "\nWind Speed :        " + windSpeed;
+                    "\nVisibility :               " + String.format("%.2f",visibiltyInKilometer/1.609) + "Mi" +
+                    "\nHumidity :              " + humidity +"g.kg-1"+
+                    "\nPressure :              " + pressure + "Hg" +
+                    "\nWind Speed :         " +String.format("%.2f",(windSpeedInKilometers/1000)/1.609) + "Mi";
 //                    "\nWind Direction :        " + windDirection;
 
 

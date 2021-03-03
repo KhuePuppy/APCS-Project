@@ -36,7 +36,7 @@
         androidx:layout_height="wrap_content"
         androidx:layout_marginTop="60dp"
         androidx:layout_marginBottom="60dp"
-        androidx:onClick="search"
+        androidx:onClick="searchButton"
         androidx:text="search"
         androidx:textSize="18sp"
         androidx:textStyle="bold"

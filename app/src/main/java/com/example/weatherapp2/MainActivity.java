@@ -65,12 +65,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void search(View view){
+    public void search(View view, String cName){
         cityName = findViewById(R.id.cityName);
         searchButton = findViewById(R.id.searchButton);
         result = findViewById(R.id.resut);
+        if(cName == "find"){
+            cName = cityName.getText().toString();
+        }
 
-        String cName = cityName.getText().toString();
 
         String content;
         Weather weather = new Weather();
@@ -145,9 +147,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void searchButton(View view){
+        search(view, "find");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        search(result, "Palo Alto");
         setContentView(R.layout.activity_main);
 
 

@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         String cName = cityName.getText().toString();
 
+
         String content;
         Weather weather = new Weather();
         try {
@@ -150,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Set the city name to the default location
+        ((TextView) findViewById(R.id.cityName)).setText("Palo Alto");
+
+        // Click on the Search button
+        findViewById(R.id.searchButton).performClick();
 
     }
     private double kelvinTooFahrenheit(double kelvin){

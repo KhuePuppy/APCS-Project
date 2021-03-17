@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchButton" />
 
     <ImageView
-        androidx:id="@+id/imageView"
+        androidx:id="@+id/weatherImageView"
         androidx:layout_width="179dp"
         androidx:layout_height="182dp"
         androidx:layout_marginStart="98dp"
@@ -74,6 +74,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_today"
-        tools:srcCompat="@drawable/sunny_background" />
+        androidx:src="@drawable/sunny_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

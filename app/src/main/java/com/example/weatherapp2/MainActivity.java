@@ -1,24 +1,28 @@
 package com.example.weatherapp2;
 
 import android.os.AsyncTask;
-//import android.support.v4.app.ActivityCompat;
-//import android.support.v4.content.ContextCompat;
-//import android.support.v7.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+//import android.support.v4.app.ActivityCompat;
+//import android.support.v4.content.ContextCompat;
+//import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -134,9 +138,19 @@ public class MainActivity extends AppCompatActivity {
 //                    "\nWind Direction :        " + windDirection;
 
 
+            //Now we will show this result on screen
             result.setText(resultText);
 
-            //Now we will show this result on screen
+            // Get the ImageView showing the weather icon
+            ImageView weatherIconImageView = (ImageView) findViewById(R.id.weatherImageView);
+
+            // show the correct weather icon
+            if(main.equalsIgnoreCase("clouds")) {
+                weatherIconImageView.setImageResource(R.drawable.cloudy_icon);
+            } else if(main.equalsIgnoreCase("clear")) {
+                weatherIconImageView.setImageResource(R.drawable.clear_icon);
+            }
+
 
         } catch (Exception e) {
             e.printStackTrace();

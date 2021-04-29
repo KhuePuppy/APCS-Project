@@ -145,10 +145,24 @@ public class MainActivity extends AppCompatActivity {
             ImageView weatherIconImageView = (ImageView) findViewById(R.id.weatherImageView);
 
             // show the correct weather icon
-            if(main.equalsIgnoreCase("clouds")) {
-                weatherIconImageView.setImageResource(R.drawable.cloudy_icon);
-            } else if(main.equalsIgnoreCase("clear")) {
-                weatherIconImageView.setImageResource(R.drawable.clear_icon);
+            if(description.equalsIgnoreCase("broken clouds")) {
+                weatherIconImageView.setImageResource(R.drawable.brokenclouds);
+            } else if(description.equalsIgnoreCase("clear sky")) {
+                weatherIconImageView.setImageResource(R.drawable.sunny);
+            } else if(description.equalsIgnoreCase("few clouds")) {
+                weatherIconImageView.setImageResource(R.drawable.fewclouds);
+            } else if(description.equalsIgnoreCase("mist")) {
+                weatherIconImageView.setImageResource(R.drawable.mist);
+            } else if(description.equalsIgnoreCase("rain")) {
+                weatherIconImageView.setImageResource(R.drawable.rain);
+            } else if(description.equalsIgnoreCase("scattered clouds")) {
+                weatherIconImageView.setImageResource(R.drawable.scatteredclouds);
+            } else if(description.equalsIgnoreCase("shower rain")) {
+                weatherIconImageView.setImageResource(R.drawable.showerrain);
+            } else if(description.equalsIgnoreCase("snow")) {
+                weatherIconImageView.setImageResource(R.drawable.snow);
+            } else if(description.equalsIgnoreCase("thunder storm")) {
+                weatherIconImageView.setImageResource(R.drawable.thunderstorm);
             }
 
 

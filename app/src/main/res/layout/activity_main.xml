@@ -34,7 +34,6 @@
         androidx:id="@+id/searchButton"
         androidx:layout_width="120dp"
         androidx:layout_height="wrap_content"
-        androidx:layout_marginTop="60dp"
         androidx:layout_marginBottom="60dp"
         androidx:onClick="search"
         androidx:text="search"
@@ -49,7 +48,7 @@
         androidx:id="@+id/result"
         androidx:layout_width="wrap_content"
         androidx:layout_height="wrap_content"
-        androidx:layout_marginTop="60dp"
+        androidx:layout_marginTop="20dp"
         androidx:padding="8dp"
         androidx:textColor="#FF000000"
         androidx:textSize="24sp"
@@ -68,11 +67,11 @@
         androidx:layout_marginEnd="135dp"
         androidx:layout_marginRight="135dp"
         androidx:layout_marginBottom="129dp"
+        androidx:src="@drawable/sunny_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result"
-        app:layout_constraintVertical_bias="0.0"
-        androidx:src="@drawable/sunny_icon" />
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
